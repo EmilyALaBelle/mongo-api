@@ -1,5 +1,5 @@
 import express from 'express'
-import { addNewFurniture, getAllFurniture, findFurnitureByModel} from './src/furniture.js'
+import { addNewFurniture, getAllFurniture, findFurnitureByModel } from './src/furniture.js'
 
 const PORT = 3030
 const app = express()
