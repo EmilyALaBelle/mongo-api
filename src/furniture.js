@@ -19,6 +19,9 @@ export async function getAllFurniture(req, res) {
 
 export async function findFurnitureByModel(req, res) {
     const db = dbConnect()
-    const collection = await db.collection("funriture").find().toArray()
+    const {search} = req.params
+    const collection = await db.collection("furniture")
+    .find({model:search})
+    .toArray()
     res.send(collection)
 }
